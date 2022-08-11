@@ -16,11 +16,11 @@ public class ControleMedicoModel {
     @Column(nullable = false, unique = true, length = 80)
     private String email;
 
-    @Column(nullable = false, length = 25)
+    @Column(nullable = false, length = 255)
     @JsonIgnore
     private String senha;
 
-    @Column(nullable = false, length = 25)
+    @Column(nullable = false, length = 255)
     @JsonIgnore
     private String confirmacaoSenha;
 

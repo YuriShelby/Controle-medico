@@ -4,6 +4,8 @@ import com.conexa.controlemedico.models.ControleMedicoModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface ControleMedicoRepository extends JpaRepository<ControleMedicoModel, Long> {
 
@@ -11,4 +13,5 @@ public interface ControleMedicoRepository extends JpaRepository<ControleMedicoMo
 
     boolean existsByCpf(String cpf);
 
+    Optional<ControleMedicoModel> findByEmail(String email);
 }
